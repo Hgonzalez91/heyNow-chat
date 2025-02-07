@@ -3,4 +3,5 @@
 body {
     background: linear-gradient(to right, rgba(131,15,142),rgba(189,69,156));
     color: white;
+    font-family: var(--font-sans);
 }

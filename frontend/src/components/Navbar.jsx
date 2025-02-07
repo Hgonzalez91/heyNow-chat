@@ -6,8 +6,8 @@ function Navbar() {
 
   return (
     <nav className=" mb-3 flex justify-between items-center py-5 px-10">
-      <Link to="/homepage">
-        <h1 className="text-2xl font-bold">HeyNow</h1>
+      <Link to="/">
+        <h1 className="text-3xl font-bold">HeyNow</h1>
       </Link>
       <ul className="flex gap-x-2">
         {isAuthenticated ? (
