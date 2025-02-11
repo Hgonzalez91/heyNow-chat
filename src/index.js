@@ -3,15 +3,17 @@ import { connectDB } from "./db.js";
 import { createServer } from "http";
 import { Server } from "socket.io";
 import { configureSockets } from "./socket.js";
-import { FRONTEND_URL } from './config.js'
+import {config} from 'dotenv'
 
+config()
 connectDB();
 
+const url = process.env.FRONTEND_URL
 const port = 3010;
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: FRONTEND_URL,
+    origin: url,
     methods: ["GET", "POST"],
   },
 });
