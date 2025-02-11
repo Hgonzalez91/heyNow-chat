@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage";
 import ProfilePage from "./pages/ProfilePage";
 import ProtectedRoute from "./ProtectedRoute";
 import Navbar from "./components/Navbar";
+import ChatPage from "./pages/ChatPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route element={<ProtectedRoute/>}>
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/messages" element={<MessagePage />} />
+            <Route path="/chat" element={<ChatPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
