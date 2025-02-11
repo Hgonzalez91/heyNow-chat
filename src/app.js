@@ -19,4 +19,8 @@ app.use(cookieParser());
 app.use("/api", authRoutes);
 app.use("/api", messagesRoutes);
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the API. Use /api for API endpoints.');
+  });
+
 export default app;
