@@ -2,6 +2,12 @@ import { useForm } from "react-hook-form";
 import { useAuth } from "../context/AuthContext";
 import { useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUsers,
+  faLock,
+  faChampagneGlasses,
+} from "@fortawesome/free-solid-svg-icons";
 
 function RegisterPage() {
   const {
@@ -21,8 +27,40 @@ function RegisterPage() {
   });
 
   return (
-    <div className="h-screen flex items-center justify-center my-12">
-      <div className="bg-white max-w-md p-10 rounded-lg text-center">
+    <div className="h-full flex flex-col lg:flex-row items-center justify-center my-12">
+      <div className="w-sm lg:ml-24 m-10 lg:mr-0 p-6 bg-[#d05aa4] flex flex-col items-center justify-center rounded-lg lg:rounded-l-lg shadow-2xl">
+        <section className="m-4 flex items-center gap-12 text-white">
+          <div className="bg-[#d05aa4] text-white text-7xl h-20 w-20 rounded-lg">
+            <FontAwesomeIcon icon={faUsers} className="text-red-600" />
+          </div>
+          <div className="flex flex-col">
+            <h1 className="text-2xl font-bold">Connect</h1>
+            <p>with your partners</p>
+          </div>
+        </section>
+        <section className="m-4 flex items-center gap-12">
+          <div className="bg-[#d05aa4] text-white text-7xl h-20 w-20 rounded-lg">
+            <FontAwesomeIcon icon={faLock} className="text-amber-400" />
+          </div>
+          <div className="flex flex-col">
+            <h1 className="text-2xl font-bold">Private</h1>
+            <p>chats</p>
+          </div>
+        </section>
+        <section className="m-4 flex items-center gap-12 text-white">
+          <div className="bg-[#d05aa4] text-white text-7xl h-20 w-20 rounded-lg">
+            <FontAwesomeIcon
+              icon={faChampagneGlasses}
+              className="text-blue-500"
+            />
+          </div>
+          <div className="flex flex-col">
+            <h1 className="text-2xl font-bold">Meet</h1>
+            <p>with your friends</p>
+          </div>
+        </section>
+      </div>
+      <div className="bg-white my-10 max-w-md p-10 rounded-lg text-center shadow-2xl">
         <h1 className="w-full text-slate-600 text-3xl my-4">
           <b>Login</b> or <b>Sign Up</b> with your email address
         </h1>

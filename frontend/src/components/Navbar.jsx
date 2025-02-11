@@ -5,14 +5,17 @@ function Navbar() {
   const { isAuthenticated, logout, user } = useAuth();
 
   return (
-    <nav className=" mb-3 flex justify-between items-center py-5 px-10">
+    <nav className="flex justify-between items-center py-5 px-10">
       <Link to="/">
         <h1 className="text-3xl font-bold">HeyNow</h1>
       </Link>
-      <ul className="flex gap-x-2">
+      <ul className="flex items-center text-center gap-x-5">
         {isAuthenticated ? (
           <>
-            <li>Welcome {user.username}</li>
+            <li>
+              <div className="flex flex-col">Welcome</div>
+              <div><b>{user.username}</b></div>
+            </li>
             <li>
               <Link to="/messages">Messages</Link>
             </li>
