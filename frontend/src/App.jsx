@@ -21,7 +21,7 @@ function App() {
           <Route element={<ProtectedRoute/>}>
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/messages" element={<MessagePage />} />
-            <Route path="/chat" element={<ChatPage />} />
+            <Route path="/heynowchat" element={<ChatPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

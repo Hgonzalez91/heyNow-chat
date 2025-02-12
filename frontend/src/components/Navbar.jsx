@@ -17,7 +17,7 @@ function Navbar() {
               <div><b>{user.username}</b></div>
             </li>
             <li>
-              <Link to="/messages">Messages</Link>
+              <Link to="/heynowchat">Chats</Link>
             </li>
             <li>
               <Link
