@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = import.meta.env.VITE_BACKEND_URL 
+const url = "https://heynow-chat.onrender.com"
 
 const instance = axios.create({
   baseURL: url,
