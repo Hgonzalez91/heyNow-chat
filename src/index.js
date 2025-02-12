@@ -8,7 +8,7 @@ import {config} from 'dotenv'
 config()
 connectDB();
 
-const url = process.env.FRONTEND_URL
+const url = "https://heynow-chat-1.onrender.com"
 const port = 3010;
 const server = createServer(app);
 const io = new Server(server, {
